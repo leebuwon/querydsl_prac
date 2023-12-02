@@ -7,21 +7,17 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.StringUtils;
 import study.querydsl.domain.member.dto.MemberSearchCondition;
 import study.querydsl.domain.member.dto.MemberTeamDto;
-import study.querydsl.domain.member.dto.QMemberDto;
 import study.querydsl.domain.member.dto.QMemberTeamDto;
 import study.querydsl.domain.member.entity.Member;
-import study.querydsl.domain.member.entity.QMember;
-import study.querydsl.domain.team.entity.QTeam;
 
 import java.util.List;
 import java.util.Optional;
 
-import static org.springframework.util.StringUtils.*;
-import static study.querydsl.domain.member.entity.QMember.*;
-import static study.querydsl.domain.team.entity.QTeam.*;
+import static org.springframework.util.StringUtils.hasText;
+import static study.querydsl.domain.member.entity.QMember.member;
+import static study.querydsl.domain.team.entity.QTeam.team;
 
 @Repository
 @RequiredArgsConstructor
